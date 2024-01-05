@@ -25,6 +25,11 @@ class _LoginPageState extends State<LoginPage> {
             padding: EdgeInsets.all(8.0),
             child:
                 Column(mainAxisAlignment: MainAxisAlignment.center, children: [
+              Container(
+                width: 200,
+                height: 200,
+                child: Image.asset('assets/images/login.png'),
+              ),
               TextField(
                 onChanged: (text) {
                   email = text;
@@ -50,9 +55,7 @@ class _LoginPageState extends State<LoginPage> {
               ElevatedButton(
                 onPressed: () {
                   if (email == 'admin@admin.com' && senha == 'admin') {
-                    Navigator.of(context).push(
-                      MaterialPageRoute(builder: (context) => HomePage()),
-                    );
+                    Navigator.of(context).pushReplacementNamed('/home');
                   } else {
                     print('Login invalido');
                   }

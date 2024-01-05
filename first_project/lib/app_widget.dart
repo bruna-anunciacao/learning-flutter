@@ -1,3 +1,4 @@
+import 'package:first_project/home_page.dart';
 import 'package:first_project/login_page.dart';
 import 'package:flutter/material.dart';
 import 'package:first_project/app_controller.dart';
@@ -13,7 +14,11 @@ class AppWidget extends StatelessWidget {
               brightness: AppController.instance.isDark
                   ? Brightness.dark
                   : Brightness.light),
-          home: LoginPage(),
+          initialRoute: '/',
+          routes: {
+            '/':(context) => LoginPage(),
+            '/home':(context) => HomePage(),
+          },
         );
       },
       animation: AppController.instance,
