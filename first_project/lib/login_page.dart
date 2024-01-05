@@ -20,15 +20,17 @@ class _LoginPageState extends State<LoginPage> {
         child: Padding(
           padding: EdgeInsets.all(8.0),
           child: Column(mainAxisAlignment: MainAxisAlignment.center, children: [
-            Container(
-              width: 200,
-              height: 200,
-              child: Image.asset('assets/images/login.png'),
-            ),
             Card(
+              color: Colors.white.withOpacity(0.8),
               child: Padding(
                 padding: const EdgeInsets.all(9.0),
                 child: Column(children: [
+                  Container(
+                    width: 100,
+                    height: 100,
+                    child: Image.asset('assets/images/login.png'),
+                  ),
+                  SizedBox(height: 20),
                   TextField(
                     onChanged: (text) {
                       email = text;
@@ -53,8 +55,9 @@ class _LoginPageState extends State<LoginPage> {
                   Container(height: 20),
                   ElevatedButton(
                     style: ElevatedButton.styleFrom(
-                        backgroundColor: Colors.cyan.shade100,
-                        foregroundColor: Colors.black),
+                        backgroundColor: Color.fromARGB(255, 162, 62, 255),
+                        foregroundColor:
+                            const Color.fromARGB(255, 255, 255, 255)),
                     onPressed: () {
                       if (email == 'admin@admin.com' && senha == 'admin') {
                         Navigator.of(context).pushReplacementNamed('/home');
@@ -81,7 +84,10 @@ class _LoginPageState extends State<LoginPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: Text('Login'), actions: [CustomSwitch()]),
+      appBar: AppBar(
+          backgroundColor: Color.fromARGB(255, 162, 62, 255),
+          title: Text('Login'),
+          actions: [CustomSwitch()]),
       body: Stack(
         children: [
           SizedBox(
@@ -90,7 +96,7 @@ class _LoginPageState extends State<LoginPage> {
                 'assets/images/background.png',
                 fit: BoxFit.cover,
               )),
-          Container(color: Colors.black.withOpacity(0.7)),
+          Container(color: Colors.black.withOpacity(0.8)),
           _body(),
         ],
       ),
