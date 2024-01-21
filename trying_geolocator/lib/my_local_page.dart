@@ -12,16 +12,17 @@ class MyLocalPage extends StatefulWidget {
 
 class _MyLocalPageState extends State<MyLocalPage> {
   late GoogleMapController mapController;
-  Set<Marker> markers = new Set<Marker>();
-  void _onMapCreated(GoogleMapController controller) {
-    mapController = controller;
-  }
+  Set<Marker> markers = Set<Marker>();
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text("Meu local"),
+        title: Center(
+            child: Text(
+          "Meu local",
+          style: TextStyle(color: Colors.white),
+        )),
         backgroundColor: Colors.deepPurple,
       ),
       body: ChangeNotifierProvider<LocalController>(
@@ -33,7 +34,7 @@ class _MyLocalPageState extends State<MyLocalPage> {
             return GoogleMap(
               myLocationEnabled: true,
               myLocationButtonEnabled: true,
-              onMapCreated: _onMapCreated,
+              onMapCreated: local.onMapCreated,
               initialCameraPosition:
                   CameraPosition(target: LatLng(latitude, longitude), zoom: 18),
               zoomControlsEnabled: true,
