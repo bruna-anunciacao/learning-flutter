@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:trying_geolocator_with_api/user_form.dart';
 import 'package:trying_geolocator_with_api/user_provider.dart';
 
 void main() {
@@ -18,7 +19,7 @@ class MainApp extends StatelessWidget {
             title: Text('Geolocation App'),
           ),
           body: Center(
-            child: Text('Hello World!'),
+            child: UserForm(),
           ),
         ),
         routes: {},
