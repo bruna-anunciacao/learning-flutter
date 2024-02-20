@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "472751215986",
+    "project_id": "geolocator-9b0da",
+    "storage_bucket": "geolocator-9b0da.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:472751215986:android:307e0caf9b18b26823f9eb",
+        "android_client_info": {
+          "package_name": "com.example.last_try_firebase"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDLzpg6aPZp1mWXt_rTyefIY2TyW0AWfQw"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:472751215986:android:71cf6a4558161d2923f9eb",
+        "android_client_info": {
+          "package_name": "com.example.teste"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDLzpg6aPZp1mWXt_rTyefIY2TyW0AWfQw"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
