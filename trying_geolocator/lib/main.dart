@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:trying_geolocator/map_page.dart';
 import 'package:trying_geolocator/my_local_page.dart';
 
 void main() {
